@@ -1,7 +1,7 @@
 # Web Technologies Course
 **Student:** Oleksandra Zhurakovska  
 **Specialty:** Software Engineering  
-**Group:** 143(1)  
+**Group:** 243  
 **University:** Yuriy Fedkovych Chernivtsi National University  
 ## Favorite Programming Languages & Technologies
 * **Programming Languages:** JavaScript, C++, Python
