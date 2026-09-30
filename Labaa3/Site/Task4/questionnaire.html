@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="uk">
+   
+  <head>
+       
+    <meta charset="UTF-8" />
+       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       
+    <title>Анкета користувача - Завдання 4</title>
+     
+  </head>
+   
+  <body>
+       
+    <div>
+           
+      <a href="../index.html" tabindex="1">
+                <font size="3">&lt;- Повернутись назад</font>      
+      </a>
+         
+    </div>
+
+       
+    <center>
+           
+      <h1>Анкета реєстрації користувача</h1>
+         
+    </center>
+
+       
+    <form action="" method="get">
+           
+      <!-- Блок 1: Основні облікові дані -->
+           
+      <fieldset>
+               
+        <legend><b>Облікові дані</b></legend>
+                <br />
+
+               
+        <!-- Текстове поле -->
+                <label for="username">Повне ім'я (ПІБ):</label><br />
+               
+        <input
+          type="text"
+          id="username"
+          name="fullname"
+          placeholder="Іваненко Іван Іванович"
+          required
+          tabindex="2"
+        /><br /><br />
+
+               
+        <!-- Пароль з регулярним виразом: рівно 6 символів, хоча б 1 велика, 1 мала, 1 цифра -->
+               
+        <label for="userpass"
+          >Пароль (рівно 6 символів: 1 велика, 1 мала, 1 цифра):</label
+        ><br />
+               
+        <input
+          type="password"
+          id="userpass"
+          name="password"
+          placeholder="Aa1234"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6}"
+          title="Пароль має містити рівно 6 символів: мінімум одну велику літеру, одну малу та одну цифру"
+          required
+          tabindex="3"
+        /><br /><br />
+
+               
+        <!-- Email з pattern та вимкненим autocomplete -->
+                <label for="useremail">Електронна пошта:</label><br />
+               
+        <input
+          type="email"
+          id="useremail"
+          name="email"
+          placeholder="example@domain.com"
+          autocomplete="off"
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          title="Введіть коректну email-адресу"
+          required
+          tabindex="4"
+        /><br /><br />
+
+               
+        <!-- Телефон з pattern -->
+                <label for="usertel">Мобільний телефон (+380...):</label><br />
+               
+        <input
+          type="tel"
+          id="usertel"
+          name="phone"
+          placeholder="+380XXXXXXXXX"
+          pattern="^\+380\d{9}$"
+          title="Формат: +380XXXXXXXXX (12 цифр)"
+          required
+          tabindex="5"
+        /><br /><br />
+
+               
+        <!-- Дата -->
+                <label for="userdate">Дата народження:</label><br />
+               
+        <input
+          type="date"
+          id="userdate"
+          name="birthdate"
+          required
+          tabindex="6"
+        /><br /><br />
+             
+      </fieldset>
+
+            <br />
+
+           
+      <!-- Блок 2: Опитування та вибір варіантів -->
+           
+      <fieldset>
+               
+        <legend><b>Опитування</b></legend>
+                <br />
+
+               
+        <!-- Радіокнопки Блок 1 (3 значення) -->
+                <label><b>Рівень вищої освіти:</b></label
+        ><br />
+               
+        <input
+          type="radio"
+          id="edu_bachelor"
+          name="education_level"
+          value="bachelor"
+          tabindex="7"
+        />
+                <label for="edu_bachelor">Бакалавр</label><br />
+
+               
+        <input
+          type="radio"
+          id="edu_master"
+          name="education_level"
+          value="master"
+          tabindex="8"
+        />
+                <label for="edu_master">Магістр</label><br />
+
+               
+        <input
+          type="radio"
+          id="edu_phd"
+          name="education_level"
+          value="phd"
+          tabindex="9"
+        />
+                <label for="edu_phd">Аспірант / PhD</label><br /><br />
+
+               
+        <!-- Радіокнопки Блок 2 (3 значення, одне checked) -->
+                <label><b>Форма навчання:</b></label
+        ><br />
+               
+        <input
+          type="radio"
+          id="form_day"
+          name="study_form"
+          value="fulltime"
+          checked
+          tabindex="10"
+        />
+                <label for="form_day">Денна (за замовчуванням)</label><br />
+
+               
+        <input
+          type="radio"
+          id="form_extramural"
+          name="study_form"
+          value="parttime"
+          tabindex="11"
+        />
+                <label for="form_extramural">Заочна</label><br />
+        <input
+          type="radio"
+          id="form_extramural"
+          name="study_form"
+          value="parttime"
+          tabindex="12"
+        />
+                <label for="form_distance">Дистанційна</label><br /><br />
+
+               
+        <!-- Чекбокси (4 значення) -->
+                <label><b>Мови програмування, які вивчаєте:</b></label
+        ><br />
+               
+        <input
+          type="checkbox"
+          id="lang_cpp"
+          name="languages"
+          value="cpp"
+          tabindex="13"
+        />
+                <label for="lang_cpp">C++</label><br />
+
+               
+        <input
+          type="checkbox"
+          id="lang_java"
+          name="languages"
+          value="java"
+          tabindex="14"
+        />
+                <label for="lang_java">Java</label><br />
+
+               
+        <input
+          type="checkbox"
+          id="lang_python"
+          name="languages"
+          value="python"
+          tabindex="15"
+        />
+                <label for="lang_python">Python</label><br />
+
+               
+        <input
+          type="checkbox"
+          id="lang_js"
+          name="languages"
+          value="javascript"
+          tabindex="16"
+        />
+                <label for="lang_js">JavaScript</label><br /><br />
+             
+      </fieldset>
+
+            <br />
+
+           
+      <!-- Блок 3: Списки та меню -->
+           
+      <fieldset>
+               
+        <legend><b>Списки та вибір категорій</b></legend>
+                <br />
+
+               
+        <!-- Випадний список (5 значень, 3-тє selected) -->
+                <label for="course_select">Оберіть ваш курс:</label><br />
+               
+        <select id="course_select" name="course" tabindex="17">
+                   
+          <option value="course_1">1 курс</option>
+                   
+          <option value="course_2">2 курс</option>
+                   
+          <option value="course_3" selected>3 курс (за замовчуванням)</option>
+                   
+          <option value="course_4">4 курс</option>
+                   
+          <option value="course_5">5 курс (Магістратура)</option></select
+        ><br /><br />
+
+               
+        <!-- Множинний вибір (6 значень, multiple) -->
+               
+        <label for="multi_tools"
+          >Оберіть інструменти розробки (утримуйте Ctrl/Cmd для вибору          
+          кількох):</label
+        ><br />
+               
+        <select id="multi_tools" name="tools" multiple size="6" tabindex="18">
+                   
+          <option value="vscode">VS Code</option>
+                   
+          <option value="git">Git & GitHub</option>
+                   
+          <option value="docker">Docker</option>
+                   
+          <option value="figma">Figma</option>
+                   
+          <option value="postman">Postman</option>
+                   
+          <option value="linux">Linux Terminal</option></select
+        ><br /><br />
+
+               
+        <!-- optgroup (4 групи по 3 пункти) -->
+                <label for="tech_stack">Оберіть основну спеціалізацію:</label
+        ><br />
+               
+        <select id="tech_stack" name="specialization" tabindex="19">
+                   
+          <optgroup label="Frontend">
+                       
+            <option value="react">React.js</option>
+                       
+            <option value="vue">Vue.js</option>
+                       
+            <option value="angular">Angular</option>
+                     
+          </optgroup>
+                   
+          <optgroup label="Backend">
+                       
+            <option value="nodejs">Node.js</option>
+                       
+            <option value="spring">Spring Boot</option>
+                       
+            <option value="django">Django</option>
+                     
+          </optgroup>
+                   
+          <optgroup label="Mobile">
+                       
+            <option value="flutter">Flutter</option>
+                       
+            <option value="kotlin">Kotlin Multiplatform</option>
+                       
+            <option value="swift">Swift / iOS</option>
+                     
+          </optgroup>
+                   
+          <optgroup label="Data & AI">
+                       
+            <option value="ml">Machine Learning</option>
+                       
+            <option value="data_eng">Data Engineering</option>
+                       
+            <option value="sql">SQL & NoSQL Systems</option>
+                     
+          </optgroup></select
+        ><br /><br />
+        <!-- datalist (список з автопідказками) -->
+                <label for="city_input">Місто проживання (з підказками):</label
+        ><br />
+               
+        <input
+          list="cities_list"
+          id="city_input"
+          name="city"
+          placeholder="Почніть вводити місто..."
+          tabindex="20"
+        />
+               
+        <datalist id="cities_list">
+                   
+          <option value="Чернівці" />
+                   
+          <option value="Київ" />
+                   
+          <option value="Львів" />
+                   
+          <option value="Івано-Франківськ" />
+                   
+          <option value="Одеса" />
+                   
+          <option value="Харків" /></datalist
+        ><br /><br />
+
+               
+        <!-- Завантаження аудіофайлів (accept + multiple) -->
+               
+        <label for="audio_files"
+          >Завантажте аудіофайли (можна кілька mp3/wav/ogg):</label
+        ><br />
+               
+        <input
+          type="file"
+          id="audio_files"
+          name="user_audio[]"
+          accept="audio/*"
+          multiple
+          tabindex="21"
+        /><br /><br />
+
+               
+        <!-- Textarea -->
+               
+        <label for="user_about"
+          >Додаткова інформація / Відгук про навчання:</label
+        ><br />
+               
+        <textarea
+          id="user_about"
+          name="about_me"
+          rows="5"
+          cols="50"
+          placeholder="Опишіть ваші враження, інтереси чи наукові теми..."
+          tabindex="22"
+        ></textarea
+        ><br /><br />
+             
+      </fieldset>
+
+            <br />
+
+           
+      <!-- Кнопки відправки та очищення -->
+           
+      <div>
+               
+        <input type="submit" value="Відправити анкету" tabindex="23" />        
+        <input type="reset" value="Очистити форму" tabindex="24" />      
+      </div>
+         
+    </form>
+     
+  </body>
+</html>
