@@ -1,0 +1,187 @@
+* {
+  font-family: Arial;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+article,
+section,
+header,
+footer {
+  text-align: justify;
+}
+p {
+  color: green;
+  text-align: center;
+}
+.red_text {
+  color: red;
+  text-align: center;
+}
+.no_wrap {
+  white-space: nowrap;
+}
+#special-paragraph {
+  font-weight: bold;
+  font-style: italic;
+}
+.shadow {
+  text-shadow: 5px -5px 3px rgb(103, 54, 103);
+}
+.for-div1 {
+  text-decoration: line-through;
+  text-transform: uppercase;
+  text-indent: 50px;
+}
+.interval {
+  letter-spacing: 30px;
+  word-spacing: 50px;
+}
+
+
+
+
+
+#main-title{
+  color: red;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif';
+}
+#sub-title{
+  color:black;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.ingredient-line{
+  font-size: 16px;
+  text-align: center;
+  margin: 6px 0;
+  color: black;
+}
+
+.crossed{
+  text-decoration: line-through;
+  color:gray;
+}
+
+.highline{
+  background-color: yellow;
+}
+.green-line{
+  border: none;
+  height: 4px;
+  background-color: green;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.footer-quote {
+            font-style: italic;
+            text-align: center;
+            font-size: 14px;
+            color: black;
+        }
+
+[href]{
+  color: rgb(203, 10, 203);
+}
+
+.title-ul{
+  color: green;
+  list-style-type: disc;
+}
+
+.ul-square{
+  list-style-type: square;
+}
+.ul-none{
+  list-style-type: none;
+}
+
+.ul-img{
+  list-style-image: url(icons8-checkmark-24.png);
+
+}
+ul li ul {
+            list-style: none; 
+        }
+
+div ul li a {
+    text-decoration: none;
+}
+.ol-number{
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+.text-background span {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+div .text-background span {
+    background-color: yellow;
+}
+
+
+span span {
+    background-color: gray;
+    text-decoration: line-through;
+}
+
+ol span span {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+
+section > p {
+    text-shadow: 3px 3px 5px darkblue;
+    text-indent: 50px;
+}
+
+
+li > ul {
+    list-style-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12'><circle cx='6' cy='6' r='5' fill='crimson'/></svg>");
+  
+}
+
+
+div > .text-background {
+    word-spacing: 50px;
+}
+
+
+.text-bold > p {
+    font-weight: bold;
+}
+*/
+.text-bold > section > p {
+    line-height: 45px;
+}
+
+
+img + p {
+    background-color: brown;
+    color: black;
+}
+
+
+section ~ p {
+    color: red;
+}
