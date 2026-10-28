@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 6: Popup (Pure CSS)</title>
+    <link rel="stylesheet" href="style6.css">
+</head>
+<body>
+    <a href="../index.html" class="home-btn">← Повернутися додому</a>
+
+    <div class="app-header">
+        <span>Mail</span>
+        <span>Images</span>
+        
+        <!-- Кнопка-тригер попапу[cite: 31, 32] -->
+        <label for="popup-toggle" class="popup-button" tabindex="0">⣿</label>
+    </div>
+
+    <!-- Прихований чекбокс для стану відкриття[cite: 32] -->
+    <input type="checkbox" id="popup-toggle" class="state-checkbox">
+
+    <!-- Прихований чекбокс для стану "More"[cite: 31, 32] -->
+    <input type="checkbox" id="more-toggle" class="state-checkbox">
+
+    <!-- Попап контейнер[cite: 32] -->
+    <div class="popup-container" tabindex="0">
+        <div class="icons-grid">
+            <div class="icon-item" tabindex="0">📅<span>Calendar</span></div>
+            <div class="icon-item" tabindex="0">✉️<span>Mail</span></div>
+            <div class="icon-item" tabindex="0">📰<span>News</span></div>
+            <div class="icon-item" tabindex="0">🗺️<span>Map</span></div>
+            <div class="icon-item" tabindex="0">📁<span>Files</span></div>
+            <div class="icon-item" tabindex="0">👤<span>Contacts</span></div>
+        </div>
+
+        <div class="extra-icons">
+            <div class="icon-item" tabindex="0">🌐<span>Translate</span></div>
+            <div class="icon-item" tabindex="0">▶️<span>Videos</span></div>
+            <div class="icon-item" tabindex="0">🔍<span>Search</span></div>
+            <div class="icon-item" tabindex="0">🖼️<span>Photos</span></div>
+        </div>
+
+        <label for="more-toggle" class="more-button" tabindex="0">More</label>
+    </div>
+</body>
+</html>

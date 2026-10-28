@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 30px;
+    background: #f4f6f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-btn {
+    align-self: flex-start;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    background: #1f1c2c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.home-btn:hover { background: #38344e; }
+
+h2 {
+    color: #1f1c2c;
+    margin-bottom: 20px;
+}
+
+.demo-container {
+    position: relative;
+    width: 600px;
+    height: 350px;
+    background: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.block {
+    width: 250px;
+    height: 80px;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Блок 1 видимий постійно */
+.block-1 {
+    background: #df0ad4;
+    color: white;
+    cursor: pointer;
+}
+
+/* Блок 2 та 3 приховані через opacity та visibility за рекомендацією з методички[cite: 21] */
+.block-2 {
+    background: #c457c4;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    margin-left: 60px;
+}
+
+.block-3 {
+    background: #daa2c9;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    margin-left: 120px;
+}
+
+/* Логіка за умовою Варіанта 4[cite: 21] */
+.block-1:hover + .block-2 {
+    opacity: 1;
+    visibility: visible;
+}
+
+.block-2:hover + .block-3 {
+    opacity: 1;
+    visibility: visible;
+}

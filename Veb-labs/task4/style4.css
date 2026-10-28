@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 20px;
+    background: #fafafa;
+}
+
+.home-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    background: #4285f4;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.menu-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.popup-button {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 15px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    user-select: none;
+}
+
+.popup-button:hover {
+    background: #f0f0f0;
+}
+
+.popup-button:focus,
+.more-button:focus,
+.icon-item:focus {
+    outline: 2px solid #4285f4;
+}
+
+/* Приховані чекбокси */
+.state-checkbox {
+    display: none;
+}
+
+/* Попап контейнер (прихований за замовчуванням) */
+.popup-container {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 280px;
+    max-height: 260px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    padding: 15px;
+    overflow-y: hidden;
+}
+
+/* Липкий заголовок усередині попапу */
+.popup-sticky-header {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    padding: 5px 0 10px 0;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    z-index: 5;
+}
+
+/* Логіка відкриття попапу при кліку на чекбокс */
+#popup-toggle:checked ~ .popup-container {
+    display: block;
+}
+
+.icons-grid, .extra-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.extra-icons {
+    display: none;
+}
+
+/* Логіка кнопки "Більше" */
+#more-toggle:checked ~ .popup-container .extra-icons {
+    display: grid;
+}
+
+#more-toggle:checked ~ .popup-container {
+    max-height: 380px;
+    overflow-y: auto; /* Вмикає скрол, при якому спрацьовує sticky */
+}
+
+.icon-item {
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.icon-item span {
+    display: block;
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.icon-item:hover, .more-button:hover {
+    background: #f0f0f0;
+}
+
+.more-button {
+    display: block;
+    text-align: center;
+    background: #f8f9fa;
+    padding: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    user-select: none;
+    border: 1px solid #ddd;
+}

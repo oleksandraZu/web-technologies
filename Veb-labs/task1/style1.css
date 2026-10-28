@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 30px;
+    background: #f4f6f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-btn {
+    align-self: flex-start;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    background: #1f1c2c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.home-btn:hover { background: #38344e; }
+
+h2 {
+    color: #1f1c2c;
+    margin-bottom: 20px;
+}
+
+/* Полотно для макета */
+.canvas {
+    position: relative;
+    width: 580px;
+    height: 340px;
+    background: #ffffff;
+    border: 2px solid #333;
+    border-radius: 4px;
+}
+
+/* Загальні стилі блоків */
+.block {
+    position: absolute;
+    width: 220px;
+    height: 110px;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #222;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Блок 1 (Синій — внизу зліва) */
+.block-1 {
+    bottom: 20px;
+    left: 10px;
+    background: #c848ef;
+    z-index: 2;
+}
+
+/* Блок 2 (Зелений — посередині, перекриває синій) */
+.block-2 {
+    bottom: 80px;
+    left: 150px;
+    background: #b00084;
+    z-index: 1;
+}
+
+/* Блок 3 (Блакитний — вгорі справа, перекриває зелений) */
+.block-3 {
+    bottom: 170px;
+    left: 300px;
+    background: #e9b0e9;
+    color: #111;
+    z-index: 2;
+}

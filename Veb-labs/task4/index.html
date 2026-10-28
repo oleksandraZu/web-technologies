@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Попап зі Sticky</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+    <!-- Кнопка повернення на головну -->
+    <a href="../index.html" class="home-btn">← Повернутися додому</a>
+
+    <div class="menu-wrapper">
+        <!-- Чекбокси для управління станом без JS -->
+        <input type="checkbox" id="popup-toggle" class="state-checkbox">
+        <input type="checkbox" id="more-toggle" class="state-checkbox">
+
+        <!-- Кнопка відкриття попапу -->
+        <label for="popup-toggle" class="popup-button" tabindex="0">☰ Меню</label>
+
+        <!-- Попап контейнер -->
+        <div class="popup-container">
+            <!-- Липкий заголовок (position: sticky) -->
+            <div class="popup-sticky-header">Виберіть сервіс</div>
+
+            <!-- Основна сітка іконок -->
+            <div class="icons-grid">
+                <div class="icon-item" tabindex="0">📁<span>Диск</span></div>
+                <div class="icon-item" tabindex="0">📧<span>Пошта</span></div>
+                <div class="icon-item" tabindex="0">📅<span>Календар</span></div>
+                <div class="icon-item" tabindex="0">📷<span>Фото</span></div>
+                <div class="icon-item" tabindex="0">💬<span>Чат</span></div>
+                <div class="icon-item" tabindex="0">📄<span>Документи</span></div>
+            </div>
+
+            <!-- Кнопка "Більше" -->
+            <label for="more-toggle" class="more-button" tabindex="0">Більше</label>
+
+            <!-- Додаткова сітка іконок -->
+            <div class="extra-icons">
+                <div class="icon-item" tabindex="0">📊<span>Таблиці</span></div>
+                <div class="icon-item" tabindex="0">📈<span>Презентації</span></div>
+                <div class="icon-item" tabindex="0">🗺️<span>Карти</span></div>
+                <div class="icon-item" tabindex="0">🎥<span>YouTube</span></div>
+                <div class="icon-item" tabindex="0">📰<span>Новини</span></div>
+                <div class="icon-item" tabindex="0">⚙️<span>Налаштування</span></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
